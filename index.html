@@ -1,0 +1,41 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            
+            <header>
+                <div class="header-content">
+                    <h1>Find your movie</h1>
+                    <a href="watchlist.html">My Watchlist</a>
+                </div>
+            </header>
+            
+            <div class="search-engine">
+                <input type="search" id="searchInput" autocomplete="off" placeholder="Search for a movie">
+                <button id="searchButton">Search</button>
+            </div>
+            
+            <main>
+                <!-- Start exploring -->
+                <div id="startingPage">
+                    <img src="images/movie-icon-black.png">
+                    <p>Start exploring</p>
+                </div>
+                <!-- Search movie list -->
+                <div id="movieList"></div>
+                <!-- No results -->
+                <div id="noResultPage">
+                    <p class="no-result-message">Unable to find what you're looking for. Please try another search.</p>
+                </div>
+                <!-- Watchlist -->
+                <div id="watchlistPage"></div>
+            </main>
+            
+        </div>
+        
+        <script src="index.js"></script>
+    </body>
+</html>

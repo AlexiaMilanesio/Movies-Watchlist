@@ -1,0 +1,352 @@
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    background-color: #121212;
+    color: white;
+}
+
+
+
+/* HEADER */
+
+header {
+    background-image: url('images/main-img.png');
+    background-size: cover;
+    background-position: 0% 27%;
+    background-blend-mode: multiply;
+    width: 100%;
+    padding: 2em 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 2.5rem;
+}
+
+.header-content > h1 {
+    letter-spacing: -0.045em;
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+.header-content > a {
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+}
+
+.header-content > a:hover {
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+
+.header-content > a:focus {
+    outline: none;
+}
+
+
+
+/* SEARCH ENGINE */
+
+.search-engine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: -1.2em;
+    padding: 0;
+    padding: 0 .8em;
+}
+
+#searchInput {
+    background: url(/images/search-icon.png) no-repeat scroll 15px 10px;
+    padding: 10px 0 10px 45px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    color: #A5A5A5;
+    font-size: 1rem;
+    background-color: rgb(40, 40, 40);
+    min-width: 350px;
+}
+
+/* Get rid of cross */  
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+#searchInput:focus {
+    outline: none;
+}
+
+#searchButton {
+    border: none;
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    background: #4B4B4B;
+    color: white;
+    font-family: Inter, sans-serif;
+    min-width: 120px;
+}
+
+#searchButton:hover,
+#searchButton:focus {
+    outline: none;
+    cursor: pointer;
+    background-color: #727272;
+}
+
+#searchButton:active {
+    box-shadow: inset 1px 1px 3px rgb(40, 40, 40);
+}
+
+
+
+/* MAIN */
+
+/* Starting page */
+
+#startingPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9em;
+    color: #2E2E2F;
+}
+
+
+/* Search error */
+
+#noResultPage {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9em;
+}
+
+.no-result-message {
+    width: 350px;       
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #787878;
+}
+
+
+/* Movies list */
+
+#movieList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Movie poster */
+.movie-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5em 0;
+    height: 200px;
+    width: 100%;
+}
+
+.movie-image {
+    width: 130px;
+}
+
+.movie-image > img {
+    width: 100%;
+}
+
+/* Movie info */
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;   
+    width: 90%; 
+    font-weight: 400;
+    font-size: .8rem;
+}
+
+/* Movie title */
+.movie-primary-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.movie-title {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: .95rem;
+    padding-right: 1em;
+}
+
+.movie-rating {
+    padding-left: 1em;
+    font-weight: 100;
+    display: flex;
+    font-size: .65rem;
+}
+
+.movie-star-icon   {
+    max-height: 1em;
+    padding-right: .5em;
+}
+
+/* Movie secondary info */
+
+/* Button */
+.watchlistAddButton,
+.watchlistRemoveButton {
+    background-color: inherit;
+    color: white;
+    border: none;
+    font-weight: inherit;
+}
+
+.watchlistAddButton:hover,
+.watchlistRemoveButton:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.movie-add-icon,
+.movie-remove-icon {
+    max-height: 1em;
+    padding-right: .5em;
+    vertical-align: top;
+}
+
+.movie-secondary-info {
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+}
+
+.movie-duration,
+.movie-genre {
+    padding-right: 20px;
+}
+
+/* Movie plot */
+.movie-plot {
+    letter-spacing: .2px;
+    color: #A5A5A5;
+    font-weight: 200;
+    font-size: 13px;
+}
+
+/* Dividing line */
+.line-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    border-bottom: 1px solid gray;
+}
+
+.line-center:last-child {
+    border-bottom: none; 
+}
+
+
+/* WATCHLIST */
+
+#emptyWatchlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 9em;
+}
+
+#emptyWatchlist > h3 {
+    color: #787878; 
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Empty watchlist add button */
+#myWatchlistAddBtn {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: .88rem;
+    color: white;
+    text-decoration: none;
+}
+
+.my-watchlist-add-icon {
+    max-height: 1.3em;
+    padding-right: 8px;
+}
+
+#myWatchlistAddBtn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 750px) {
+    .line-center {
+        width: 90%;
+    }
+}
+
+@media (max-width: 550px) {
+    .header-content > h1 {
+        font-size: 1.7rem;
+    }
+    
+    .header-content > a {
+        font-size: .9rem;
+    }
+
+    .search-engine {
+        width: 95%;
+    }
+
+    #searchInput {
+        min-width: 80%;
+        font-size: .8rem;
+    }
+
+    #searchButton {
+        min-width: 20%;
+        font-size: .8rem;
+    }   
+
+    .movie-container {
+        padding: 0;
+    }
+    
+    .movie-image {
+        width: 110px;
+    }
+
+    .movie-title {
+        font-size: .9rem;
+    }
+
+    .movie-primary-info,
+    .movie-secondary-info,
+    .movie-plot {
+        font-size: .7rem;
+    }
+
+    .movie-duration,
+    .movie-genre {
+        padding-right: 1em;
+    }
+}
